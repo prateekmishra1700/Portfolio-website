@@ -1,128 +1,467 @@
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-Hy4kyC4zVCCVjzLnZILzSxreK/QZ+hjC+3i5q5Fa5ZO5/L5U6aVVdymzvb+PbZU6" crossorigin="anonymous">
-   </head>
-   <body>
-    <header>
-     <nav>
-      <ul>
-       
-       <li><a href="#education">Education</a></li>
-       <li><a href="#Experience">Experience</a></li>
-       <li><a href="#projects">Projects</a></li>
-       <li><a href="#contact">Contact</a></li>
-      </ul>
-     </nav>
-     <div class="hero-image">
-      <img src="WhatsApp_Image_2022-04-11_at_5.56.32_PM-removebg-preview.png" alt="My Photo">
-      <h1>Prateek Mishra</h1>
-      <h2>Software Engineer</h2>
-      <a class="resume1" download>Download Resume</a>
-     </div>
-    </header>
-    <main class="main" id="#aboutme">
-     <h3 style="color: white;">About Me</h3>
-     <p style="color:aliceblue">Hello, My Name is Prateek Mishra, currently I am pursuing Bachelor of Technology in Computer Science and Engineering from Sharda University (2020-2024). I am Proficient in C++, JavaScript, PHP, Data Structures and Algorithms, HTML and CSS, with good knowledge of software development life cycle and team work. I have worked on projects such as Online Book Store, E-marketplace for farmers, Image Caption Generator,Identification of Pneumonia using X-Ray Images and Career Development website. I am an good communicator and disciplined person with calm and focused Demeanor, seeking opportunities for fulfilmet of my passion for software engineering.</p>
-    
-    </main>
-    
-
-    <section id="education" style="background-color: black ;">
-        <h3 style="color: white;">Education </h3>
-        <div class="project" >
-          <h3>Bachelor of Technology</h3>
-          <p>Bachelor of Technology in Computer Science and Engineering with specialization in AI and ML<br>
-            Sharda University (2020-2024)<br>
-            Score: 8.6 CGPA 
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">My Portfolio</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Prateek Mishra</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img id="profile-image" src="./assets/profile-pic.png" alt="John Doe profile picture" style="border-radius: 200px;" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Prateek Mishra</h1>
+        <p class="section__text__p2">Software Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Me
+          </button>
+        </div>
+        <div id="socials-container">
+         <a href="https://www.linkedin.com/in/prateek-mishra-a575b8178/">
+            <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            
+          />
+         </a>    <a href="https://www.github.com/prateekmishra1700"><img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='github.com/prateekmishra1700'"
+          /></a>
           
         </div>
-        <div class="project">
-            <h3>Senior Secondary School</h3>
-            <p>Senior Secondary School with Physics, Chemistry, Mathematics, English and Computer Science<br>
-            Shri Mahaprabhu Public School (2019)<br>
-            Score: 81.2% 
-            
-          </div>
-          <div class="project">
-            <h3>High School</h3>
-            <p>High School with Science, Mathematics,Hindi, Social Science English and Computer Science<br>
-            Shri Mahaprabhu Public School (2017)<br>
-            Score: 10 CGPA
-            
-          </div>
-        
-        </div>
-      </section>
-      <section id="Experience" style="background-color: #155;">
-        <h3 style="color: white;">Work Experience</h3>
-        <div class="project" >
-          <h3>AI/ML Intern</h3>
-          <p>Fueled by a passion for AI and web development, I made a dynamic
-            impact at Nema AI as an AI Intern, contributing to a multitude of
-            innovative AI and ML projects while mastering the art of teamwork in a
-            fast-paced environment.
-            <br>
-            Arpil 2022 to June 2022.
-        
-          
-        </div>
-        <div class="project" >
-        <h3>Internshala Student Partner</h3>
-        <p>As a Campus Ambassador for Internshala, I effectively promoted the
-            company and its training programs to college students improving my
-            communication and team work skills. This role also provided opportunities to enhance my outreach efforts and contribute to a strong
-            learning culture.
-          <br>
-          March 2022.
-        
-        </div>
-      </section>
-    <section id="projects" style="background-color: black;" >
-      <h3 style="color: white;">Projects</h3>
-      <div class="project">
-        <h3>Online Book Store</h3>
-        <p>Basic book store built using HTML, CSS, JavaScript, and PHP. Users can browse books, add them to their cart, and checkout.</p>
-        <a class="btn1" href="#">View project</a>
-      </div>
-      <div class="project">
-        <h3>Image Caption Generator</h3>
-        <p>Trained on Flickr8k dataset, this model generates captions for images using Deep Learning techniques.</p>
-        <a class="btn1" href="#">View project</a>
-      </div>
-      <div class="project">
-        <h3>Career Development Website</h3>
-        <p>Built using HTML, CSS, JavaScript, and PHP, this website offers career development resources, Online Learning, and many other opportunities.</p>
-        <a class="btn1" href="#">View project</a>
-      </div>
-      <div class="project">
-        <h3>Digital Marketplace for Farmers</h3>
-        <p>An Digital Marketplace for farmers built using HTML, CSS, JavaScript, PHP and MySQL. Farmers can browse products add them to cart and checkout.</p>
-        <a class="btn1" href="#">View project</a>
-      </div>
-      <div class="project">
-        <h3>Pneumonia Identification using X-Ray Images</h3>
-        <p>A deep Learning model that can efficiently identify Pneumonia by analyzing the X-Ray images. The model was trained using RNN</p>
-        <a class="btn1" href="#">View project</a>
       </div>
     </section>
-
-    <section id="contact">
-        <h3 style="padding-left: 50px;">Contact Me</h3>
-        <div class="contact-icons" style="padding-left: 50px;">
-          <a href="mailto:prateekmishra1700@gmail.com"><img src="408-4087639_tiscali-mail-transparent-background-email-icon-clipart-no (1).png" alt="Email"></a>
-          <a href="https://www.linkedin.com/in/prateek-mishra-a575b8178" target="_blank"><img src="Linkedin-logo-on-transparent-background-PNG (1).png" alt="LinkedIn"></a>
-          <a href="https://github.com/prateekmishra1700" target="_blank"><img src="monochrome-photography-black-small-to-medium-sized-cats-cat-like-mammal-carnivoran.jpg" alt="GitHub"></a>
-          <a href="https://www.hackerrank.com/2020574956_prat1" target="_blank"><img src="e42086b19ef0e5a938f82f18a45d036a.jpg" alt="HackerRank"></a>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
         </div>
-      </section>
-      
- 
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Skills</h3>
+              <p><b>Web Development</b> <br />HTML, CSS, JavaScript, React</p>
+              <p><b>Data Structures</b> <br />C++</p>
+              <p><b>Database Management System</b> <br> MySQL, MongoDB <br /></p>
+              <p><b>Version Control</b> <br> Git<br /></p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelor of Technology - Computer Science <b>Sharda University</b> <br><br /> Senior Secondary School <b> <br>Shri Mahaprabhu Public School
+              </b> <br><br /> High School <b> <br>Shri Mahaprabhu Public School
+              </b> </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              An Inquisitive, energetic and decisive person with a calm and focused demeanor. Currently in final year of
+              Bachelor of Technology computer science and engineering with a specialization in artificial intelligence and
+              machine learning. Proficient in C++, JavaScript, React, Data Structures and Algorithms, HTML, CSS, MySQL
+              and Git with a good understanding of software development life cycle and team-oriented work ethics. Seeking opportunity for fulfillment of my passion for software engineering
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>UI Design</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend and Database</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MongoDB</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="details-container">
+        <h2 class="experience-sub-title">Internships</h2>
+        <div class="article-container">
+          <article>
+            
+            <div>
+              <h3 style="width: 700px; margin-left: -28%;">AI and Web Development Intern</h3>
+              <p  style="width: 700px; margin-left: -28%;">Nema AI Private Limited</p>
+              <p  style="width: 700px; margin-left: -28%;">April, 2022 - June, 2022</p>
+              <br>
+              <p  style="width: 700px; margin-left: -28%;"> <quote> "Fueled by a passion for AI and web development, I made a dynamic impact at Nema AI 
+                an AI and web development Intern, contributing to a multitude of innovative AI and ML projects while mastering the art of teamwork in a fast-paced environment" </quote></p>
+              
+            </div>
+          </article>
+         
+              
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>  
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Building-AI-powered-Image-Caption-Generator.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Image Caption Generator</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Online grocery webinar-GettyImages-1165215193_0.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Digital Marketplace for farmers</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+          
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/online-bookstore.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Online Book Store</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+          
+            </div>
+          </div> 
+          
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/1_CIPJeHB_VT3TeRMORjgF6Q.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Identification Of Pneumonia Using Deep learning</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+          
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/tic tac toe.jpeg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Tic Tac Toe Game</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+          
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/stock price prediction.jpeg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Stock Price Prediction</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+          
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">prateekmishra1717@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/prateek-mishra-a575b8178/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
     <footer>
-     <p>Copyright &copy; 2023 Prateek Mishra</p>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Prateek Mishra. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
-   </body>
-   </html>
-   
+  </body>
+</html>
